@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BiuBiu.Commons
+namespace BiuBiu.ViewModels
 {
-    internal class Data
+    internal class MainViewModel : ViewModelBase
     {
-        
     }
 }
