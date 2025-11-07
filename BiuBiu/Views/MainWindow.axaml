@@ -8,5 +8,5 @@
         x:Class="BiuBiu.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="BiuBiu">
-	<views:MainView/>
+	<views:MessageView/>
 </Window>
