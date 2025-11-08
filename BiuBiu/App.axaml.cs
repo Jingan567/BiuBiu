@@ -1,11 +1,14 @@
 using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
-using System.Linq;
 using Avalonia.Markup.Xaml;
+using BiuBiu.Services;
 using BiuBiu.ViewModels;
 using BiuBiu.Views;
+using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
 
 namespace BiuBiu;
 
@@ -18,6 +21,23 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
+        #region DI
+        //var serviceCollection = new ServiceCollection();
+
+        //// 注册主窗口（在构建容器后再解析，这里先提供一个实例）
+        //var mainWindow = new MainWindow();
+        //serviceCollection.AddSingleton<Window>(mainWindow);
+
+        //// 注册弹窗服务
+        //serviceCollection.AddSingleton<IDialogService, AvaloniaDialogService>();
+
+        // 注册其他服务和 ViewModel
+        //serviceCollection.AddTransient<MainViewModel>();
+        //serviceCollection.AddTransient<NameInputViewModel>();
+
+        //Services = serviceCollection.BuildServiceProvider();
+        #endregion
+
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             // Avoid duplicate validations from both Avalonia and the CommunityToolkit. 
